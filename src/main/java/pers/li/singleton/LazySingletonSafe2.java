@@ -36,8 +36,13 @@ public class LazySingletonSafe2 {
         //步骤1
         if (hungrySingleton == null) {
             synchronized (LazySingletonSafe2.class) {
-                //步骤2
-                hungrySingleton = new LazySingletonSafe2();
+                //第二次检查，当多线程时，两个线程同时经过了第一次检查，到达synchronized
+                //这时将没有限制的创建两次对象，所以在经过第一次判断后，synchronized后
+                //仍旧需要一次判断来确认该对象只会被创建一次
+                if (hungrySingleton == null) {
+                    //步骤2
+                    hungrySingleton = new LazySingletonSafe2();
+                }
             }
         }
         //步骤3
