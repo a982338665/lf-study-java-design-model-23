@@ -38,6 +38,11 @@
             -分离代码的耦合（高内聚，低耦合）
             -业务逻辑变化，不需要修改源代码，不用重启
             -加快编程和测试速度
+    4.动态代理：
+        1.代理一个接口：D:\go-20191030\DesignModel23\src\main\java\pers\li\proxy\dynamicproxy
+        2.代理多个接口：D:\go-20191030\DesignModel23\src\main\java\pers\li\proxy\dynamicproxy\multiple
+            ·接口的排序很重要
+            ·当多个接口里面有方法同名，则默认一第一个接口的方法调用
    
 ### 2.单例模式：
     
