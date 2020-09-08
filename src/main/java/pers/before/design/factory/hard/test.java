@@ -13,7 +13,7 @@ public class test {
         factory10000.sendSmS();
 
         SendFactory factory10086 = new SendFactory_10086();
-        pers.li.design.factory.hard.sendMail sendMail1 = factory10086.sendMail();
+        sendMail sendMail1 = factory10086.sendMail();
         sendMail1.send();
         factory10086.sendSmS();
 

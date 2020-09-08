@@ -29,7 +29,7 @@ public class FactoryTest {
         /**
          * 利用反射进行工厂模式实现---类的全路径
          */
-        Sender sender1 = SendFactory.produceByClass("pers.li.design.factory.simple.SmsSender");
+        Sender sender1 = SendFactory.produceByClass("pers.before.design.factory.simple.SmsSender");
         sender1.Send();
 
     }  
